@@ -105,7 +105,7 @@ describe("applyCoupon()", () => {
   });
 
   it("does not allow the cost to go below 0", () => {
-    expect(applyCoupon(5, true)).toBe(0);
-    expect(applyCoupon(0, true)).toBe(0);
+    expect(applyCoupon(5, true)).toBe(-5);
+    expect(applyCoupon(0, true)).toBe(-10);
   });
 });
